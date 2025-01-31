@@ -1,46 +1,247 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seungmin's Portfolio</title>
+  <style>
+    /* Global Styles */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f9f8;
+        color: #343a40;
+    }
+
+    /* Header Section */
+    header {
+        text-align: center;
+        background: linear-gradient(90deg, #4caf50, #81c784);
+        color: #ffffff;
+        padding: 40px 20px;
+        border-bottom: 3px solid #388e3c;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    header h3 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 10px 0 20px;
+    }
+
+    header p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    /* Button Styles */
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .button-container a {
+        text-decoration: none;
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #4caf50;
+        background-color: #ffffff;
+        border: 2px solid #4caf50;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .button-container a:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Namebar Styles */
+    .namebar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #81c784;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #4caf50;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .namebar h2 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 1.5rem;
+    }
+
+    .namebar a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.1rem;
+        margin-left: 15px;
+        padding: 5px 10px;
+        background-color: #ffffff;
+        color: #4caf50;
+        border: 2px solid #4caf50;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .namebar a:hover {
+        background-color: #4caf50;
+        color: #ffffff;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        header {
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        header h3 {
+            font-size: 1rem;
+        }
+
+        header p {
+            font-size: 0.9rem;
+        }
+
+        .button-container a {
+            font-size: 0.9rem;
+            padding: 10px 16px;
+        }
+
+        .namebar h2 {
+            font-size: 1.2rem;
+        }
+
+        .namebar a {
+            font-size: 0.9rem;
+        }
+    }
+    /* Main Content */
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        border: 3px solid #4caf50; /* 테두리 색상 추가 */
+    }
+
+    section:hover {
+        transform: scale(1.02);
+        transition: 0.3s ease-in-out;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        color: #388e3c;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    section p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    footer {
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    a {
+        color: #4caf50;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #1b5e20;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .namebar {
+            padding: 15px;
+        }
+
+        .namebar .button-container a {
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+    }
+  </style>
 </head>
 <body>
-  <section class="center">
-    <aside class="sidebar"></aside>
-    
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
-            </div>
-          </section>
-        </section>
+  <!-- Header Section -->
+  <header>
+    <h1>송승민</h1>
+    <h3>Main Developer</h3>
+    <p>안녕하세요! smile-song 개발자 송승민입니다. C와 C++을 메인으로 코딩하며 HTML, CSS, JavaScript를 공부하고 있습니다.</p>
+    <div class="button-container">
+      <a href="mailto:songseungmin0518@naver.com">메일보내기</a>
+      <a href="tel:01064950518">전화걸기</a>
+      <a href="http://smile-songme.kro.kr/" target="_blank">자기소개</a>
+    </div>
+  </header>
+
+  <!-- Namebar -->
+  <div class="namebar">
+    <h2>developer</h2>
+    <div>
+      <a href="http://smile-songme.kro.kr">About</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <main>
+      <section onclick="window.location.href='http://smile-songbaekjoon.kro.kr';">
+        <h2>Baekjoon</h2>
+        <p>직접 구현한 알고리즘 문제들을 난이도 별로 나누어 기록하였습니다. </p>
       </section>
-    </section>
-  </section>
+
+      <section onclick="window.location.href='http://smile-songport.kro.kr/';">
+        <h2>Portfolio</h2>
+        <p>코딩 여정을 기록한 포트폴리오로, 시중의 웹페이지를 모방하거나 직접 제작한 웹페이지들입니다.</p>
+      </section>
+
+      <section onclick="window.location.href='http://smile-songgame.kro.kr/';">
+        <h2>Game</h2>
+        <p>직접 제작한 게임입니다.</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Song Seungmin. All rights reserved.</p>
+  </footer>
 </body>
 </html>
